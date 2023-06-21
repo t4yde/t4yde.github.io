@@ -1,0 +1,21 @@
+.footer {
+	border-top: 1px solid #C5CFE4;
+	padding: 12px 0;
+	.social-icons {
+		a {
+			width: 36px;
+			height: 36px;
+			border: 1px solid $px-theme;
+			color: $px-theme;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			margin-left: 5px;
+			&:hover {
+				background-color: $px-theme;
+				color: $px-white;
+			}
+		}
+	}
+}

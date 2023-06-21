@@ -1,0 +1,70 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 15px;
+    z-index: 111;
+    transition: ease all 0.35s;
+    @include down-md {
+        background-color: rgba($px-white, .9);
+        backdrop-filter: blur(15px);
+        top: 0px;
+    }
+    .fixed-header & {
+        background-color: rgba($px-white, .9);
+        backdrop-filter: blur(15px);
+        top: 0px;
+        box-shadow: 0px 6px 12px rgba(119, 118, 156, 0.1);
+    }
+    .navbar {
+        padding: 15px 0;
+    }
+    .navbar-nav {
+        @include down-md {
+            padding-top: 20px;
+        }
+        > .nav-item {
+            padding-left: 20px;
+            padding-right: 20px;
+            @include down-md {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            > .nav-link {
+                padding: 0;
+                line-height: 60px;
+                font-size: 16px;
+                text-transform: uppercase;
+                color: $px-dark;
+                @include down-md {
+                    padding: 10px 0;
+                    line-height: normal;
+                }
+                &:hover,
+                &.active {
+                    color: $px-theme;
+                }
+            }
+        }
+    }
+    @include down-md {
+        .navbar-toggler {
+            display: flex;
+            flex-direction: column;
+            border: none;
+            padding: 4px 9px;
+            outline: none;
+            box-shadow: none;
+            span {
+                width: 25px;
+                height: 2px;
+                background: $px-dark;
+                margin: 4px 0;
+                .white-theme & {
+                    background: $px-white;
+                }
+            }
+        }
+    }
+}
